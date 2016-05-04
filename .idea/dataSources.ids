@@ -6,4 +6,7 @@
   <data-source name="Rails ticketee: test" uuid="5545fac7-379a-4c78-ba86-f6c31030910c">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source name="Rails ticketee: production" uuid="c8d48765-c834-46f6-9907-2ea606bd17c0">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
