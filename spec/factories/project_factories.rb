@@ -3,3 +3,4 @@ FactoryGirl.define do
     name "Example project"
   end
 end
+
