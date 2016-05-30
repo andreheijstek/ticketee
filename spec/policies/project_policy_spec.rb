@@ -6,7 +6,6 @@ describe ProjectPolicy do
 
   subject { ProjectPolicy }
 
-
   context "policy_scope" do
 
     subject { Pundit.policy_scope(user, Project) }
