@@ -17,7 +17,7 @@ RSpec.feature "Editors can edit existing tickets" do
     fill_in "Name", with: "Make it really shiny!"
     click_button "Update Ticket"
     expect(page).to have_content "Ticket has been updated."
-    within("#ticket h2") do
+    within("#ticket") do
       expect(page).to have_content "Make it really shiny!"
       expect(page).not_to have_content ticket.name
     end end

@@ -25,7 +25,7 @@ feature "Users can view tickets" do
     expect(page).to have_content "Make it shiny!"
     expect(page).to_not have_content "Standards compliance"
     click_link "Make it shiny!"
-    within("#ticket h2") do
+    within("#ticket") do
       expect(page).to have_content "Make it shiny!"
     end
     expect(page).to have_content "Gradients! Starbursts! Oh my!"
