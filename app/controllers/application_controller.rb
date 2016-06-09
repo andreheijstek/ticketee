@@ -9,6 +9,9 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :not_authorized
 
+  def new
+  end
+  
   private
 
   def not_authorized

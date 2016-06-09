@@ -72,5 +72,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  resources :attachments, only: [:show]
+  resources :attachments, only: [:show, :new]
 end
