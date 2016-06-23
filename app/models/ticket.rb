@@ -9,10 +9,10 @@ class Ticket < ActiveRecord::Base
 
   attr_accessor :tag_names
 
-  accepts_nested_attributes_for :attachments, reject_if: :all_blank
-
   validates :name, presence: true
   validates :description, presence: true, length: { minimum: 10 }
+
+  accepts_nested_attributes_for :attachments, reject_if: :all_blank
 
   before_create :assign_default_state
 
@@ -22,7 +22,7 @@ class Ticket < ActiveRecord::Base
       self.tags << Tag.find_or_initialize_by(name: name)
     end
   end
-  
+
   private
 
   def assign_default_state

@@ -10,11 +10,8 @@ class AttachmentsController < ApplicationController
 
   def new
     @index = params[:index].to_i
-    puts "\n\n>>> @index = #{@index}"
     @ticket = Ticket.new
-    puts ">>> @ticket = #{@ticket.inspect}"
     @ticket.attachments.build
-    puts ">>> @ticket.attachments.build was just executed"
     render layout: false
   end
 end

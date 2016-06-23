@@ -4,8 +4,6 @@ class Comment < ActiveRecord::Base
   belongs_to :ticket
   belongs_to :author, class_name: "User"
 
-  attr_accessor :tag_names
-
   validates :text, presence: true
 
   scope :persisted, lambda { where.not(id: nil) }
@@ -15,6 +13,8 @@ class Comment < ActiveRecord::Base
   before_create :set_previous_state
   after_create :set_ticket_state
   after_create :associate_tags_with_ticket
+
+  attr_accessor :tag_names
 
   private
 
