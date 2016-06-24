@@ -14,6 +14,10 @@ class Ticket < ActiveRecord::Base
 
   accepts_nested_attributes_for :attachments, reject_if: :all_blank
 
+  searcher do
+    label :tag, from: :tags, field: "name"
+  end
+
   before_create :assign_default_state
 
   def tag_names=(names)
