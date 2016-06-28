@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
-# Use sqlite3 as the database for Active Record, but use postgress in production
+# Use sqlite3 as the database for Active Record, but use postgress in productiongit commit -m "Add Postgres for our production data store"
 gem "sqlite3", group: [:development, :test]
 gem "pg",      group:  :production
 
@@ -69,5 +69,6 @@ end
 
 group :production do
   gem "fog", "~> 1.29.0"
+  gem "rails_12factor"
 end
 
