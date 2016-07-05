@@ -47,6 +47,10 @@ gem "puma", group: :production
 
 gem "sinatra"
 
+group :development do
+  gem 'web-console', '~> 2.0'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -64,5 +68,4 @@ group :test do
   gem "database_cleaner", "~> 1.4"
   gem "email_spec", "~> 1.6.0"
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
 end
