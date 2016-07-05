@@ -2,5 +2,12 @@ language: ruby
 rvm: 2.2.1
 script: bundle exec rspec
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+deploy:
+  provider: heroku
+  api_key:
+    secure: ZwvUl4xoUdBfN+iifIQL6jUT0wfoom2IxO3S07mjyOjeQyFYYCOKr1paCMm/3dsM1Iiy3FuXxskAwlX4G90O7WCMGVas1ElA5a9IYRA5a1xa9jREExpdyqvKDq/cLbEqHQHivGiaNeYhAp8vraoFDnyCTz/ncs8v7lO+FJcHDnumgpDWmV5aTge6c+g3UAOhY9C2rQB5wKEK/PMD/Oi71aYikKutAdpWl8o8M5L1xDRqq2RefngvYPjh3d9oXyFi8tP31aWJWIiI/NDm6y46Gwaw9VlZLFMgCX2nhByERAJavfzGwoNy0/0t4aLjM8t19Ltx5fF7fE2wGAQ3qp9p3TKxdnQmmodDWV0F0xAcMEnrOw7MthKfKxvUMXEwOHuZ9ZHFADQeXcPYkF3L4Y7k/RlFRFu88sfjNnO2H9gu7oLOftzkDibZqsWBDfNdDrr4hQW/GJD0IXRQZxoI6NvetKQ+hFOX3a+eECsZqlOIsdA5E/srkkTqTIkt/IWgVod6jHwigPxzQfSjcsMJaUSjuqo7h/83DrViQhf3APMLRz2xRWokH/uSUTSeudd3z4+29UfrtvwvIASa/mhsnY8h/Jcs8LudF0Vo0iR6rXKXxcfTH+1NyQTXyr68JO/27AkkGBiciRJX1LdyDhVUAdWJBfgv2tTVuJ6n4FvIhZSnH2c=
+  app: fast-inlet-47335
+  on:
+    repo: andreheijstek/ticketee
