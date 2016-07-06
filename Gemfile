@@ -46,6 +46,7 @@ gem "rails_12factor", group: :production
 gem "puma", group: :production
 
 gem "sinatra"
+gem "active_model_serializers", "~> 0.9.3"
 
 group :development do
   gem 'web-console', '~> 2.0'
