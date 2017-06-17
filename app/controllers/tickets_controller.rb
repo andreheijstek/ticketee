@@ -54,6 +54,11 @@ class TicketsController < ApplicationController
   def show
     authorize @ticket, :show?
     @comment = @ticket.comments.build(state_id: @ticket.state_id)
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @ticket}
+    end
   end
 
   def edit
@@ -65,6 +70,7 @@ class TicketsController < ApplicationController
     if @ticket.update(ticket_params)
       flash[:notice] = "Ticket has been updated."
       redirect_to [@project, @ticket]
+
     else
       flash.now[:alert] = "Ticket has not been updated."
       render "edit"

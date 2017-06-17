@@ -2,13 +2,21 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails ticketee: development" uuid="c359838e-d04f-444d-b8d2-516545abb7f5">
+      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <auth-required>false</auth-required>
-      <first-sync>true</first-sync>
+      <introspection-schemas>*:</introspection-schemas>
     </data-source>
-    <data-source name="Rails ticketee: test" uuid="5545fac7-379a-4c78-ba86-f6c31030910c" />
+    <data-source name="Rails ticketee: test" uuid="5545fac7-379a-4c78-ba86-f6c31030910c">
+      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <introspection-schemas>*:</introspection-schemas>
+    </data-source>
     <data-source name="Rails ticketee: production" uuid="c8d48765-c834-46f6-9907-2ea606bd17c0">
+      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <auth-required>false</auth-required>
-      <first-sync>true</first-sync>
+      <introspection-schemas>*:</introspection-schemas>
     </data-source>
   </component>
 </project>

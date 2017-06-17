@@ -2,6 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
-  $("#add_file").on "ajax:success", (event, data) ->
+  $("#add_file").off().on "ajax:success", (event, data) ->
+    console.log(event);
     $("#attachments").append data
     $(this).data "params", { index: $("#attachments div.file").length }
+

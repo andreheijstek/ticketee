@@ -39,7 +39,6 @@ feature "Users can create new tickets" do
   end
 
   # TODO: Fix bug with File attachment popping up twice
-=begin
   scenario "with multiple attachments", js: true do
     fill_in "Name", with: "Add documentation for blink tag"
     fill_in "Description", with: "Blink tag's speed attribute"
@@ -64,7 +63,6 @@ feature "Users can create new tickets" do
       expect(page).to have_content "speed.txt"
     end
   end
-=end
 
   scenario "with associated tags" do
     fill_in "Name", with: "Non-standards compliance"
